@@ -1,5 +1,49 @@
+:root {
+  --bg: #10372e;
+  --bg-dark: #0f1412;
+  --green: #8ee36b;
+  --purple: #bfa6e9;
+  --text: #eaeaea;
+  --font-main: "Comfortaa", system-ui, sans-serif;
+}
+
 body {
-    font-family: 'Comfortaa', sans-serif;
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.btn {
+  background: var(--green);
+  color: var(--bg-dark);
+
+  font-family: inherit; /* Inherits font from body */
+  padding: 16px 32px;
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  border: 1px solid var(--bg-dark);
+  box-shadow: 
+    4px 6px 0px 0px var(--green), 
+    4px 6px 0px 1px var(--bg-dark);
+  cursor: pointer;
+
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  background: #7ad85a;
+  transform: translate(-1px, -2px);
+  box-shadow: 
+    5px 8px 0px 0px var(--green), 
+    5px 8px 0px 1px var(--bg-dark);
+}
+
+.btn:active {
+  transform: translate(4px, 6px);
+  box-shadow: none;
 }
 /*:root {*/
 /*  --text: #6b6375;*/
