@@ -5,24 +5,71 @@
   --purple: #bfa6e9;
   --text: #eaeaea;
   --font-main: "Comfortaa", system-ui, sans-serif;
+  
+  --font-header: 16px;
+  --font-title: 48px;
+  --font-title-2: 40px;
+  --font-title-3: 32px;
+  --font-main-text: 24px;
+  --font-button: 24px;
+  --font-link: 16px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
   font-family: var(--font-main);
   background: var(--bg);
   color: var(--text);
+  font-size: var(--font-main-text);
+  line-height: 1.4;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+/* Typography hierarchy */
+h1 {
+  font-size: var(--font-title);
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: var(--font-title-2);
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: var(--font-title-3);
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+p {
+  font-size: var(--font-main-text);
+  margin: 0;
+}
+
+a {
+  font-size: var(--font-link);
 }
 
 .btn {
   background: var(--green);
   color: var(--bg-dark);
 
-  font-family: inherit; /* Inherits font from body */
+  font-family: inherit;
   padding: 16px 32px;
   border-radius: 12px;
 
-  font-size: 24px;
+  font-size: var(--font-button);
   font-weight: 500;
 
   border: 1px solid var(--bg-dark);
@@ -45,6 +92,17 @@ body {
 .btn:active {
   transform: translate(4px, 6px);
   box-shadow: none;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  :root {
+    --font-title: 36px;
+    --font-title-2: 32px;
+    --font-title-3: 24px;
+    --font-main-text: 18px;
+    --font-button: 20px;
+  }
 }
 /*:root {*/
 /*  --text: #6b6375;*/
