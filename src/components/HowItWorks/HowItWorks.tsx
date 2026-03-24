@@ -15,7 +15,8 @@ const HowItWorks = () => {
                 <FaCalendarPlus />
               </div>
               <h3>Create habits</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>Create simple daily habits
+                and track your progress effortlessly.</p>
             </div>
 
             <div className="card">
@@ -23,7 +24,8 @@ const HowItWorks = () => {
                 <FaLink />
               </div>
               <h3>Join focus rooms</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>Stay motivated by joining others
+                and building habits together.</p>
             </div>
 
             <div className="card">
@@ -31,7 +33,8 @@ const HowItWorks = () => {
                 <FaArrowTrendUp />
               </div>
               <h3>Grow your pet</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>Watch your virtual pet grow
+                as you stay consistent every day.</p>
             </div>
           </div>
         </div>

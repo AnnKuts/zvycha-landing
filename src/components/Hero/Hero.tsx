@@ -89,7 +89,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1>BUILD HABITS TOGETHER</h1>
         <p>
-          Turn habits into fun with friends. <br />
+          Turn habits into fun with friends! <br />
           Grow your virtual pet <br />
           as you grow yourself.
         </p>
