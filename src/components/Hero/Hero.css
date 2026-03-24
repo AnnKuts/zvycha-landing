@@ -70,6 +70,13 @@
 
 .hero-cta {
   animation: cta-pulse 10s ease-in-out infinite;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.hero-cta:hover,
+.hero-cta:active {
+    animation: none;
 }
 
 @keyframes cta-pulse {

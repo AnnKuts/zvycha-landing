@@ -21,6 +21,7 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   position: relative;
   font-family: var(--font-main);
+  overflow: hidden;
 }
 
 .beta-modal-title {
@@ -149,15 +150,16 @@
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 10;
 }
 
 .sparkle {
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   background: var(--green);
   border-radius: 50%;
-  animation: sparkle-animate 1s ease-out forwards;
+  animation: sparkle-animate 1.5s ease-out forwards;
 }
 
 .sparkle:nth-child(1) {
