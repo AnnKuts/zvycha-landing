@@ -5,7 +5,7 @@
   --purple: #bfa6e9;
   --text: #eaeaea;
   --font-main: "Comfortaa", system-ui, sans-serif;
-  
+
   --font-header: 16px;
   --font-title: 48px;
   --font-title-2: 40px;
@@ -15,7 +15,8 @@
   --font-link: 16px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -73,8 +74,8 @@ a {
   font-weight: 500;
 
   border: 1px solid var(--bg-dark);
-  box-shadow: 
-    4px 6px 0px 0px var(--green), 
+  box-shadow:
+    4px 6px 0px 0px var(--green),
     4px 6px 0px 1px var(--bg-dark);
   cursor: pointer;
 
@@ -84,8 +85,8 @@ a {
 .btn:hover {
   background: #7ad85a;
   transform: translate(-1px, -2px);
-  box-shadow: 
-    5px 8px 0px 0px var(--green), 
+  box-shadow:
+    5px 8px 0px 0px var(--green),
     5px 8px 0px 1px var(--bg-dark);
 }
 

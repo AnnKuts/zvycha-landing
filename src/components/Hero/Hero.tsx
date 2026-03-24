@@ -72,19 +72,67 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <img src={pawsLeft1} alt="" className="hero-paws hero-paws-left delay-0s" />
-      <img src={pawsLeft2} alt="" className="hero-paws hero-paws-left delay-0-3s" />
-      <img src={pawsLeft3} alt="" className="hero-paws hero-paws-left delay-0-6s" />
-      <img src={pawsLeft4} alt="" className="hero-paws hero-paws-left delay-0-9s" />
-      <img src={pawsLeft5} alt="" className="hero-paws hero-paws-left delay-1-2s" />
-      <img src={pawsLeft} alt="" className="hero-paws hero-paws-left delay-1-5s" />
+      <img
+        src={pawsLeft1}
+        alt=""
+        className="hero-paws hero-paws-left delay-0s"
+      />
+      <img
+        src={pawsLeft2}
+        alt=""
+        className="hero-paws hero-paws-left delay-0-3s"
+      />
+      <img
+        src={pawsLeft3}
+        alt=""
+        className="hero-paws hero-paws-left delay-0-6s"
+      />
+      <img
+        src={pawsLeft4}
+        alt=""
+        className="hero-paws hero-paws-left delay-0-9s"
+      />
+      <img
+        src={pawsLeft5}
+        alt=""
+        className="hero-paws hero-paws-left delay-1-2s"
+      />
+      <img
+        src={pawsLeft}
+        alt=""
+        className="hero-paws hero-paws-left delay-1-5s"
+      />
 
-      <img src={pawsRight1} alt="" className="hero-paws hero-paws-right delay-0s" />
-      <img src={pawsRight2} alt="" className="hero-paws hero-paws-right delay-0-3s" />
-      <img src={pawsRight3} alt="" className="hero-paws hero-paws-right delay-0-6s" />
-      <img src={pawsRight4} alt="" className="hero-paws hero-paws-right delay-0-9s" />
-      <img src={pawsRight5} alt="" className="hero-paws hero-paws-right delay-1-2s" />
-      <img src={pawsRight} alt="" className="hero-paws hero-paws-right delay-1-5s" />
+      <img
+        src={pawsRight1}
+        alt=""
+        className="hero-paws hero-paws-right delay-0s"
+      />
+      <img
+        src={pawsRight2}
+        alt=""
+        className="hero-paws hero-paws-right delay-0-3s"
+      />
+      <img
+        src={pawsRight3}
+        alt=""
+        className="hero-paws hero-paws-right delay-0-6s"
+      />
+      <img
+        src={pawsRight4}
+        alt=""
+        className="hero-paws hero-paws-right delay-0-9s"
+      />
+      <img
+        src={pawsRight5}
+        alt=""
+        className="hero-paws hero-paws-right delay-1-2s"
+      />
+      <img
+        src={pawsRight}
+        alt=""
+        className="hero-paws hero-paws-right delay-1-5s"
+      />
 
       <div className="hero-content">
         <h1>BUILD HABITS TOGETHER</h1>
@@ -93,7 +141,7 @@ const Hero = () => {
           Grow your virtual pet <br />
           as you grow yourself.
         </p>
-        <button 
+        <button
           className="btn hero-cta"
           onClick={() => setIsBetaModalOpen(true)}
         >
@@ -108,9 +156,9 @@ const Hero = () => {
             className={getPhoneClass(index)}
             onClick={() => handlePhoneClick(index)}
           >
-            <PhoneMockup 
-              image={phone.image} 
-              alt={phone.alt} 
+            <PhoneMockup
+              image={phone.image}
+              alt={phone.alt}
               variant={phone.variant}
               index={index}
             />
@@ -118,25 +166,25 @@ const Hero = () => {
         ))}
       </div>
 
-      <div 
+      <div
         className="hero-carousel"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div 
+        <div
           className="hero-carousel-track"
           style={{ transform: `translateX(-${currentSlide * 220}px)` }}
         >
           {phones.map((phone, index) => (
-            <div 
-              key={index} 
-              className={`hero-carousel-slide ${currentSlide === index ? 'active' : ''}`}
+            <div
+              key={index}
+              className={`hero-carousel-slide ${currentSlide === index ? "active" : ""}`}
             >
               <div className="phone">
-                <PhoneMockup 
-                  image={phone.image} 
-                  alt={phone.alt} 
+                <PhoneMockup
+                  image={phone.image}
+                  alt={phone.alt}
                   variant={phone.variant}
                   index={index}
                 />
@@ -148,7 +196,7 @@ const Hero = () => {
           {phones.map((_, index) => (
             <button
               key={index}
-              className={`carousel-dot ${currentSlide === index ? 'active' : ''}`}
+              className={`carousel-dot ${currentSlide === index ? "active" : ""}`}
               onClick={() => setCurrentSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -156,7 +204,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <BetaModal 
+      <BetaModal
         isOpen={isBetaModalOpen}
         onClose={() => setIsBetaModalOpen(false)}
       />

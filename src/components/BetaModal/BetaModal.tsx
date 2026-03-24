@@ -145,7 +145,7 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
         )}
       </div>
     </div>,
-    document.getElementById("modal-root")!
+    document.getElementById("modal-root")!,
   );
 };
 

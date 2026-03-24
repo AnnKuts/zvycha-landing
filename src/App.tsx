@@ -14,13 +14,13 @@ function App() {
         <Header />
         <Hero />
       </div>
-      
+
       <div className="green-section">
         <img src={circleBg} alt="" className="green-circle-bg green-circle-1" />
         <img src={circleBg} alt="" className="green-circle-bg green-circle-2" />
         <img src={circleBg} alt="" className="green-circle-bg green-circle-3" />
       </div>
-      
+
       <HowItWorks />
       <Features />
       <Footer />

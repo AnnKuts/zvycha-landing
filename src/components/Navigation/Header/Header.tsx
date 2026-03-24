@@ -1,6 +1,6 @@
 import logo from "../../../assets/logos/logo.svg";
 import "./Header.css";
-import {useState} from "react";
+import { useState } from "react";
 import BetaModal from "../../BetaModal/BetaModal";
 
 const Header = () => {

@@ -8,7 +8,10 @@
 
 .top-dark-section-bg {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: var(--bg-dark);
   border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px;
@@ -54,21 +57,21 @@
   .top-dark-section {
     margin-bottom: 220px;
   }
-  
+
   .green-circle-bg {
     width: 600px;
   }
-  
+
   .green-circle-1 {
     top: -450px;
     right: -200px;
   }
-  
+
   .green-circle-2 {
     top: -250px;
     left: -250px;
   }
-  
+
   .green-circle-3 {
     top: 200px;
     right: -280px;

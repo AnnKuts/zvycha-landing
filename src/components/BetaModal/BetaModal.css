@@ -48,7 +48,9 @@
   font-size: var(--font-main-text);
   margin-bottom: 8px;
   box-sizing: border-box;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .beta-modal-input:focus {
@@ -89,16 +91,16 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  box-shadow: 
-    4px 6px 0px 0px var(--green), 
+  box-shadow:
+    4px 6px 0px 0px var(--green),
     4px 6px 0px 1px var(--bg-dark);
 }
 
 .beta-modal-button:hover:not(:disabled) {
   background: #7ad85a;
   transform: translate(-1px, -2px);
-  box-shadow: 
-    5px 8px 0px 0px var(--green), 
+  box-shadow:
+    5px 8px 0px 0px var(--green),
     5px 8px 0px 1px var(--bg-dark);
 }
 
@@ -114,8 +116,8 @@
 .beta-modal-button-success:hover {
   background: #7ad85a;
   transform: translate(-1px, -2px);
-  box-shadow: 
-    5px 8px 0px 0px var(--green), 
+  box-shadow:
+    5px 8px 0px 0px var(--green),
     5px 8px 0px 1px var(--bg-dark);
 }
 

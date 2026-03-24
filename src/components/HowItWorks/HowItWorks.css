@@ -52,7 +52,9 @@
   gap: 16px;
   min-width: 280px;
   max-width: 400px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
   box-sizing: border-box;
   animation: card-glow-pulse 4s ease-in-out infinite;
@@ -61,7 +63,7 @@
 }
 
 .get-started .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -100%;
@@ -81,9 +83,15 @@
   z-index: 1;
 }
 
-.get-started .card:nth-child(1)::before { animation-delay: 0s; }
-.get-started .card:nth-child(2)::before { animation-delay: 2.3s; }
-.get-started .card:nth-child(3)::before { animation-delay: 4.6s; }
+.get-started .card:nth-child(1)::before {
+  animation-delay: 0s;
+}
+.get-started .card:nth-child(2)::before {
+  animation-delay: 2.3s;
+}
+.get-started .card:nth-child(3)::before {
+  animation-delay: 4.6s;
+}
 
 @keyframes shimmer-sweep-card {
   0% {
@@ -97,24 +105,33 @@
   }
 }
 
-.get-started .card:nth-child(1) { animation-delay: 0s; }
-.get-started .card:nth-child(2) { animation-delay: 1.3s; }
-.get-started .card:nth-child(3) { animation-delay: 2.6s; }
+.get-started .card:nth-child(1) {
+  animation-delay: 0s;
+}
+.get-started .card:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.get-started .card:nth-child(3) {
+  animation-delay: 2.6s;
+}
 
 @keyframes card-glow-pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 8px 8px 0px 0px #e5e5e5;
   }
   50% {
-    box-shadow: 8px 8px 0px 0px #e5e5e5,
-                0 0 20px rgba(191, 166, 233, 0.3);
+    box-shadow:
+      8px 8px 0px 0px #e5e5e5,
+      0 0 20px rgba(191, 166, 233, 0.3);
   }
 }
 
 .get-started .card:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 11px 11px 0px 0px #e5e5e5,
-              0 0 30px rgba(191, 166, 233, 0.5);
+  box-shadow:
+    11px 11px 0px 0px #e5e5e5,
+    0 0 30px rgba(191, 166, 233, 0.5);
   animation: none;
 }
 
