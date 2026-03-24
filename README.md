@@ -34,6 +34,9 @@ Demo is accessible with [this link](https://zvycha-landing.vercel.app/)
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b2293081-2e6c-465a-839a-e9bbb48fe10b" width="370px" />
 </p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dd8dde9f-4e43-42fa-9dd7-fcd1a2fa6540" width="370px" />
+</p>
 
 ### Getting Started for Local Development
 
