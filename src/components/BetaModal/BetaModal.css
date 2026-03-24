@@ -1,0 +1,231 @@
+.beta-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.beta-modal {
+  background: var(--bg-dark);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  font-family: var(--font-main);
+}
+
+.beta-modal-title {
+  font-size: var(--font-title-2);
+  margin: 0 0 12px 0;
+  color: var(--text);
+}
+
+.beta-modal-description {
+  font-size: var(--font-main-text);
+  color: #aaa;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.beta-modal-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: var(--font-main-text);
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.beta-modal-input:focus {
+  outline: none;
+  border-color: var(--green);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.beta-modal-input::placeholder {
+  color: #666;
+}
+
+.beta-modal-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.beta-modal-error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+.beta-modal-button {
+  width: 100%;
+  padding: 16px 32px;
+  background: var(--green);
+  color: var(--bg-dark);
+  border: 1px solid var(--bg-dark);
+  border-radius: 12px;
+  font-family: var(--font-main);
+  font-size: var(--font-button);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 
+    4px 6px 0px 0px var(--green), 
+    4px 6px 0px 1px var(--bg-dark);
+}
+
+.beta-modal-button:hover:not(:disabled) {
+  background: #7ad85a;
+  transform: translate(-1px, -2px);
+  box-shadow: 
+    5px 8px 0px 0px var(--green), 
+    5px 8px 0px 1px var(--bg-dark);
+}
+
+.beta-modal-button:active:not(:disabled) {
+  transform: translate(4px, 6px);
+  box-shadow: none;
+}
+
+.beta-modal-button-success {
+  background: var(--green);
+}
+
+.beta-modal-button-success:hover {
+  background: #7ad85a;
+  transform: translate(-1px, -2px);
+  box-shadow: 
+    5px 8px 0px 0px var(--green), 
+    5px 8px 0px 1px var(--bg-dark);
+}
+
+.beta-modal-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.beta-modal-success {
+  text-align: center;
+}
+
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: sparkle-animate 1s ease-out forwards;
+}
+
+.sparkle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  top: 15%;
+  right: 20%;
+  animation-delay: 0.1s;
+}
+
+.sparkle:nth-child(3) {
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 0.2s;
+}
+
+.sparkle:nth-child(4) {
+  bottom: 25%;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+@keyframes sparkle-animate {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0);
+  }
+}
+
+.sparkle:nth-child(1) {
+  --tx: -30px;
+  --ty: -30px;
+}
+
+.sparkle:nth-child(2) {
+  --tx: 30px;
+  --ty: -30px;
+}
+
+.sparkle:nth-child(3) {
+  --tx: -30px;
+  --ty: 30px;
+}
+
+.sparkle:nth-child(4) {
+  --tx: 30px;
+  --ty: 30px;
+}
+
+@media (max-width: 600px) {
+  .beta-modal {
+    padding: 32px;
+    max-width: 95%;
+  }
+
+  .beta-modal-title {
+    font-size: var(--font-title-3);
+  }
+
+  .beta-modal-description {
+    font-size: 14px;
+  }
+}

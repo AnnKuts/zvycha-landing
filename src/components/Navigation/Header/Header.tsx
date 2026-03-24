@@ -7,9 +7,9 @@ const Header = () => {
         <img src={logo} alt="Logo" />
       </div>
       <nav>
-        <a href="#">Character</a>
-        <a href="#">Guide</a>
-        <a href="#">Features</a>
+        <a href="#">Join demo</a>
+        <a href="#how-it-works">Guide</a>
+        <a href="#features">Features</a>
         <a href="#">Contribute</a>
       </nav>
     </header>

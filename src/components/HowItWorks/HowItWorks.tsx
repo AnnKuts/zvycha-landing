@@ -3,7 +3,7 @@ import "./HowItWorks.css";
 
 const HowItWorks = () => {
   return (
-    <div className="how-it-works-wrapper">
+    <div id="how-it-works" className="how-it-works-wrapper">
       <section className="get-started">
         <div className="container">
           <h2 className="title">How it works?</h2>

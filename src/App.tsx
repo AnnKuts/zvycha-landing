@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Navigation/Header/Header.tsx";
 import Hero from "./components/Hero/Hero.tsx";
 import Footer from "./components/Navigation/Footer/Footer.tsx";
-import HowItWorks from "./components/GetStartedSection/HowItWorks/HowItWorks.tsx";
+import HowItWorks from "./components/HowItWorks/HowItWorks.tsx";
 import Features from "./components/Features/Features.tsx";
 import circleBg from "./assets/decorations/circle-bg.svg";
 
