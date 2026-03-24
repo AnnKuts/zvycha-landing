@@ -21,11 +21,11 @@ const PhoneMockup = ({ image, variant = 1, index = 0 }: PhoneMockupProps) => {
             <rect width="296" height="648" rx="20" fill="white"/>
           </clipPath>
           <linearGradient id={`shimmer-gradient-${uniqueId}`} x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="white" stopOpacity="0" />
-            <stop offset="35%" stopColor="white" stopOpacity="0.2" />
-            <stop offset="50%" stopColor="white" stopOpacity="0.5" />
-            <stop offset="65%" stopColor="white" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="white" stopOpacity="0" />
+            <stop offset="0%"  stopOpacity="0" />
+            <stop offset="35%"  stopOpacity="0.2" />
+            <stop offset="50%"  stopOpacity="0.5" />
+            <stop offset="65%"  stopOpacity="0.2" />
+            <stop offset="100%"  stopOpacity="0" />
           </linearGradient>
         </defs>
         <g clipPath={`url(#main-clip-${uniqueId})`}>
@@ -101,11 +101,11 @@ const PhoneMockup = ({ image, variant = 1, index = 0 }: PhoneMockupProps) => {
             <rect width="184" height="400" rx="12" fill="white"/>
           </clipPath>
           <linearGradient id={`shimmer-gradient-${uniqueId}`} x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="white" stopOpacity="0" />
-            <stop offset="35%" stopColor="white" stopOpacity="0.2" />
-            <stop offset="50%" stopColor="white" stopOpacity="0.5" />
-            <stop offset="65%" stopColor="white" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="white" stopOpacity="0" />
+            <stop offset="0%"  stopOpacity="0" />
+            <stop offset="35%"  stopOpacity="0.2" />
+            <stop offset="50%"  stopOpacity="0.5" />
+            <stop offset="65%"  stopOpacity="0.2" />
+            <stop offset="100%"  stopOpacity="0" />
           </linearGradient>
         </defs>
         <g clipPath={`url(#main-clip-${uniqueId})`}>
