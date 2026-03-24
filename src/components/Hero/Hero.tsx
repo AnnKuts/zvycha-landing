@@ -15,8 +15,8 @@ import pawsRight5 from "../../assets/decorations/paws-right-5.svg";
 import pawsRight from "../../assets/decorations/paws-right.svg";
 import PhoneMockup from "./PhoneMockup";
 import pic1 from "../../assets/mockups/pics/pics-1.svg";
-import pic2 from "../../assets/mockups/pics/pics-2.svg";
-import pic3 from "../../assets/mockups/pics/pics-3.svg";
+import pic2 from "../../assets/mockups/pics/pics-3.svg";
+import pic3 from "../../assets/mockups/pics/pics-2.svg";
 
 const Hero = () => {
   const [selectedPhone, setSelectedPhone] = useState(1);
@@ -89,9 +89,9 @@ const Hero = () => {
       <div className="hero-content">
         <h1>BUILD HABITS TOGETHER</h1>
         <p>
-          Lorem ipsum blandit dolor<br />
-          pellentesque viverra felis nec sed id<br />
-          eu malesuada.
+          Turn habits into fun with friends. <br />
+          Grow your virtual pet <br />
+          as you grow yourself.
         </p>
         <button 
           className="btn hero-cta"

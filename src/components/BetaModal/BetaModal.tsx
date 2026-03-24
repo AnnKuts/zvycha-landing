@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import "./BetaModal.css";
 
 interface BetaModalProps {
@@ -19,12 +20,7 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
   };
 
   const handleSubmit = async () => {
-    if (!email.trim()) {
-      setError("Please enter a valid email");
-      return;
-    }
-
-    if (!validateEmail(email)) {
+    if (!email.trim() || !validateEmail(email)) {
       setError("Please enter a valid email");
       return;
     }
@@ -51,18 +47,9 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
       setIsLoading(false);
       setIsSuccess(true);
     } catch (err) {
-      console.error("Subscription error:", err);
+      console.error(err);
       setError("Something went wrong. Please try again.");
       setIsLoading(false);
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !isLoading && !isSuccess) {
-      handleSubmit();
-    }
-    if (e.key === "Escape") {
-      handleClose();
     }
   };
 
@@ -80,15 +67,32 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !isLoading && !isSuccess) {
+      handleSubmit();
+    }
+    if (e.key === "Escape") {
+      handleClose();
+    }
+  };
+
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div className="beta-modal-overlay" onClick={handleOverlayClick}>
       <div className="beta-modal">
         {!isSuccess ? (
@@ -119,14 +123,7 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
               disabled={isLoading}
               className="beta-modal-button"
             >
-              {isLoading ? (
-                <>
-                  <span className="spinner"></span>
-                  Joining...
-                </>
-              ) : (
-                "Get early access"
-              )}
+              {isLoading ? "Joining..." : "Get early access"}
             </button>
           </>
         ) : (
@@ -134,7 +131,7 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
             <div className="beta-modal-success">
               <h2 className="beta-modal-title">You're in!</h2>
               <p className="beta-modal-description">
-                Thanks! We'll send an email to join the demo when we're ready.
+                Thanks! We'll send an email when ready.
               </p>
 
               <button
@@ -144,16 +141,11 @@ const BetaModal = ({ isOpen, onClose }: BetaModalProps) => {
                 Got it
               </button>
             </div>
-            <div className="sparkles">
-              <span className="sparkle"></span>
-              <span className="sparkle"></span>
-              <span className="sparkle"></span>
-              <span className="sparkle"></span>
-            </div>
           </>
         )}
       </div>
-    </div>
+    </div>,
+    document.getElementById("modal-root")!
   );
 };
 
