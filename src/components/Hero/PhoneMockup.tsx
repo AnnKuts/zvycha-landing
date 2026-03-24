@@ -18,7 +18,7 @@ const PhoneMockup = ({ image, variant = 1, index = 0 }: PhoneMockupProps) => {
             <rect x="11.763" y="12.109" width="272.474" height="623.782" rx="20" ry="20" />
           </clipPath>
           <clipPath id={`main-clip-${uniqueId}`}>
-            <rect width="296" height="648" rx="20" fill="white"/>
+            <rect width="296" height="648" rx="20" />
           </clipPath>
           <linearGradient id={`shimmer-gradient-${uniqueId}`} x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%"  stopOpacity="0" />
@@ -98,7 +98,7 @@ const PhoneMockup = ({ image, variant = 1, index = 0 }: PhoneMockupProps) => {
             <rect x="7.312" y="7.474" width="169.376" height="385.051" rx="12" ry="12" />
           </clipPath>
           <clipPath id={`main-clip-${uniqueId}`}>
-            <rect width="184" height="400" rx="12" fill="white"/>
+            <rect width="184" height="400" rx="12"/>
           </clipPath>
           <linearGradient id={`shimmer-gradient-${uniqueId}`} x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%"  stopOpacity="0" />
